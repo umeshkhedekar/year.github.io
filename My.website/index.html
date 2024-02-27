@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./accets/9391703.png" type="image/x-icon">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+      <!--==== Cdn link ====-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+     
+
+     <title><>My website</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#"><>Mywebsite</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#"><> Mywebsite</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Solution_stack#Full-stack_developer">About</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="login"><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!----------name---------------------->
+    <div class="main">
+        <div class="name">
+            <h3>Hello...</h3>
+            <h1>I Am <span>UMESH KHEDEKAR</span></h1>
+            <h3>  '<span></span></h3>
+            <button><a href="heremi.html">Here me</a></button>
+        </div>
+        <div class="maleimg">
+            <img src="./accets/screen.png">
+        </div>
+    </div>
+   
+  <!-------image slider-->
+  <div class="slider-container">
+    <div class="slider-wrapper">
+        <img src="./accets/programming.jpg" alt="Image 1">
+        <img src="./accets/workspace.jpg"alt="Image 2">
+        <img src="./accets/business.jpg" alt="Image 3">
+        <!-- Add more images as needed -->
+    </div>
+    <button class="prev-btn" onclick="changeSlide(-1)"><</button>
+    <button class="next-btn" onclick="changeSlide(1)">></button>
+
+    <div class="email">
+        <h2><span>-  </span>Join our Mywebsite<span>  -</span></h2>
+        <div class="plan">
+           <form method="post" id="my" onsubmit="showAlert(); return false;">
+            <input type="email" id="inputEmail" name="inputEmail" placeholder="YOUR EMAIL ADDRESS" required> <BR><button type="submit">Submit</button>
+           </form>
+        </div>
+    </div>
+</div>
+<div class="note">
+    <p><h2>Note :</h2>To put it simply, full-stack development is the process of developing both the client-side (frontend) and server-side (backend) components of websites. The frontend, or the client side, is the interface users or visitors use to engage with web applications directly..</p>
+</div>
+<!----------footer------------>
+<footer>
+    <p>Copyright&copy; 2024 <span><>My Website</span>. All rights reserved.</p>
+    <div  class="icco">
+        <a href="https://www.instagram.com/umesh.khedekar.796?igsh=MWxraWJjcW1tYmF0bQ=="><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/umesh.khedekar.796?mibextid=hIlR13"> <i class="fa-brands fa-facebook"></i></a>
+       
+        <i class="fa-brands fa-twitter"></i>
+        <a href="https://wa.me/qr/EODRKGHUTJJVJ1"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+   
+    
+  </footer>
+
+
+      
+<script src="index.js"></script>
+
+</body>
+</html>

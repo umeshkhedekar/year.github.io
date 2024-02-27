@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width:40%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="date"] {
+            width: calc(100% - 16px);
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form input{
+          width:250px;
+        }
+       
+        #dob {
+          width: 250px;
+        }
+        #service{
+          width: 350px;
+        }
+        button{
+          width: 300px;
+        }
+        @media (max-width: 790px) {
+          
+          form{
+            width:100%;
+            text-align: center;
+          }
+          #service{
+            width: 250px;
+          }
+          button{
+            width:250px;
+          }
+        }
+    </style>
+</head>
+<body>
+ 
+
+<form id="myForm" method="post">
+  <h2>Requirment Registration form</h2>
+    <label for="firstName">Name:</label>
+    <input type="text" id="firstName" name="firstName" placeholder="Firstname" required>  <input type="text" id="lastName" name="lastName" placeholder="Lastname" required>
+
+    <label for="lastName">Address:</label>
+    <input type="text" id="lastName" name="address" placeholder="Vilage" required> <input type="text" id="city" name="city" placeholder="city" required>
+   
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" onchange="calculateAge()" required> <input type="text" id="age" name="age" placeholder="Age" readonly>
+
+    <label for="service">Select Service:</label>
+    <select id="service" name="subject" required>
+      <option value="" disabled selected>Select your service</option>
+        <option value="web">Web design</option>
+        <option value="science">Web devlopment</option>
+        <option value="english">App devlopment</option>
+        <option value="english">database create</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <button type="submit" id="myButton" value="submit">Submit</button>
+</form>
+
+<script>
+    function calculateAge() {
+        const dobInput = document.getElementById('dob');
+        const ageInput = document.getElementById('age');
+
+        const dob = new Date(dobInput.value);
+        const today = new Date();
+
+        const age = today.getFullYear() - dob.getFullYear();
+
+        // Adjust age if birthday hasn't occurred yet this year
+        if (today.getMonth() < dob.getMonth() || (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate())) {
+            age--;
+        }
+
+        ageInput.value = age;
+    }
+
+        // Get the form element by its ID
+var myForm = document.getElementById("myForm");
+
+// Add a submit event listener to the form
+myForm.addEventListener("submit", function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Display an alert when the form is submitted
+    alert("send message submitted!\ " );
+
+    document.getElementById("myForm").reset();
+});
+</script>
+
+</body>
+</html>

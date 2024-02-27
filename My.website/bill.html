@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            text-align: center;
+            margin-top: 100px;
+        }
+        form input{
+            padding: 7px;
+            width: 210px;
+        }
+        button{
+            padding: 7px;
+            width: 110px;
+            margin-left: 50px;
+            background-color: rgb(9, 158, 53);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm" method="post" name="google-sheet" >
+        <h2>Bill datails</h2>
+
+        <label>Bill name</label>
+        <input type="text" name="billname" required> <br><br>
+        
+        <label>Bill total</label>
+        <input type="text" name="billtotal" required><br><br>
+
+        <label>Bill date</label>
+        <input type="date" name="billdate" required><br><br>
+
+        <label>Bill time</label>
+        <input type="time" name="billtime" required><br><br>
+
+        <button type="submit" name="submit">Submit</button>
+    </form>
+</body>
+<script>
+     // google sheets //
+
+  
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyEVPYAOBZJTrjKI75w1P5dcn4-T2KT62yiGdS5OhMerBVIoL-qhMLZH3UI_rwgpbMu/exec'
+  const form = document.forms['google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    alert("you succefully")
+
+    document.getElementById("myForm").reset();
+  })
+
+</script>
+</html>
